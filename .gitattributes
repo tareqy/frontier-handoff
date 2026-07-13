@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+
+# Raw records are immutable byte artifacts. Do not normalize line endings.
+artifacts/**/raw.* -text -eol

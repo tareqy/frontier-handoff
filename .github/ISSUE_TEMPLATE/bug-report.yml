@@ -1,0 +1,51 @@
+name: Bug, metadata correction, or broken reference
+description: Report repository defects without rewriting historical raw content.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include a live secret or exposed private material here. Follow SECURITY.md and report it privately.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Problem type
+      options:
+        - Validation failure
+        - Metadata error
+        - Broken link or missing file
+        - Documentation error
+        - Raw checksum mismatch
+        - Historical-content concern
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Affected path or artifact ID
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include the exact validation command and error when applicable. Do not paste sensitive content.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and evidence
+      description: For metadata corrections, state the old value, proposed value, evidence, and whether any score or conclusion changes.
+    validations:
+      required: true
+  - type: checkboxes
+    id: history
+    attributes:
+      label: Historical integrity
+      options:
+        - label: I understand that raw artifacts must not be silently edited; corrections require metadata history or a new derivative.
+          required: true
+        - label: This report contains no credential, personal data, confidential material, or private content.
+          required: true

@@ -1,0 +1,90 @@
+# Frontier Handoff artifact metadata template, schema version 0.1.
+# Required fields are populated below. Optional unknown facts may be `unknown`
+# or omitted as defined in methodology/provenance-standard.md.
+
+schema_version: "0.1"
+artifact_id: "[globally-unique-lower-case-id]"
+title: "[descriptive title]"
+description: "[what this record contains, without endorsing its claims]"
+artifact_type: "[artifact type from the provenance standard]"
+claim_class: "[hypothesis | operational-proposal | experimental-result | reviewed-recommendation | verified-finding]"
+status: "[raw | curated | superseded | deprecated]"
+
+# Model display names are not exact identifiers.
+source_model: unknown
+target_model: unknown
+provider: unknown
+model_identifier: unknown
+model_mode: unknown
+interface: unknown
+system_instructions: unknown
+created_at: unknown
+imported_at: "[YYYY-MM-DD]"
+
+# Use repository-root-relative paths. Use unknown if no prompt is established.
+prompt_path: unknown
+parent_artifacts: []
+tools_available: unknown
+attachments_or_context_used: unknown
+
+content:
+  path: "[repository/root/relative/path]"
+  media_type: "[media type]"
+  sha256: "[64 lower-case hexadecimal characters]"
+  byte_count: 0
+
+provenance:
+  source: "[user-provided | direct-generation | repository-import | other]"
+  original_filename: unknown
+  observed_import_filename: unknown
+  source_model_attribution: unknown
+  target_model_attribution: unknown
+  prompt_output_relationship: unknown
+  content_modified: false
+  copy_integrity_verified: false
+  chain_of_custody: "[what was directly observed, what was reported, and what remains unauthenticated]"
+
+# Raw content has an empty mapping. Curated content uses stable modification
+# IDs whose records follow the provenance standard.
+modifications: {}
+# Example for curated content:
+# modifications:
+#   stable-modification-id:
+#     occurred_at: "[ISO 8601 date or unknown]"
+#     actor: "[editor, model, process, or unknown]"
+#     modification_type: "[normalization | redaction | correction | annotation | reorganization | other]"
+#     description: "[exact content change]"
+#     reason: "[why the change was made]"
+#     source: "[parent artifact ID, repository path, or unknown]"
+#     meaning_changed: false
+
+# Evidence paths point to governed metadata.yaml records, not prose files.
+review:
+  human_reviewed: false
+  reviewers: []
+  human_review_paths: []
+  cross_model_reviewed: false
+  review_models: []
+  cross_model_review_paths: []
+  experimentally_validated: false
+  evaluation_paths: []
+  independently_reproduced: false
+  reproduction_paths: []
+
+# Testing status is separate from outcome; testing never means improvement.
+validation_status: not-tested
+# Experimental reports may add one of: beneficial, harmful, mixed,
+# no-detectable-effect, or inconclusive.
+# effect_direction: inconclusive
+lifecycle_events: {}
+# Example event:
+# lifecycle_events:
+#   stable-event-id:
+#     occurred_at: "[ISO 8601 date or unknown]"
+#     actor: "[person, model, process, or unknown]"
+#     event_type: "[event type from docs/artifact-lifecycle.md]"
+#     description: "[auditable event account]"
+known_limitations:
+  - "[known limitation or missing provenance]"
+license: unknown
+relevant_commit: unknown

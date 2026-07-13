@@ -1,0 +1,67 @@
+name: Evaluation or reproduction report
+description: Propose a baseline comparison, completed evaluation, or independent reproduction.
+title: "[Evaluation] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Testing status does not imply improvement. Report negative, mixed, null, failed, and inconclusive outcomes.
+  - type: dropdown
+    id: report_type
+    attributes:
+      label: Report type
+      options:
+        - Experiment proposal
+        - Completed experiment
+        - Independent reproduction
+        - Failed or interrupted run
+        - Evaluation-method dispute
+    validations:
+      required: true
+  - type: input
+    id: experiment_id
+    attributes:
+      label: Experiment or proposed ID
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Preregistered question and primary outcome
+      description: State when and where these were fixed, or disclose that the analysis is exploratory.
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Conditions and trials
+      description: Describe baseline, treatment, optional reference, model IDs, interface, mode, tools, context, settings, dates, trial count, and treatment placement.
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Bias and comparability controls
+      description: Cover blinding, order, prompt leakage, model drift, tool/context differences, evaluator conflicts, stochastic variation, and exclusions.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Validation status, observed effect, and limitations
+      description: Use supported, not-supported, mixed, inconclusive, or not yet run for the claim; separately report beneficial, harmful, mixed, no-detectable-effect, or inconclusive effect. Link run-level records when available.
+    validations:
+      required: true
+  - type: checkboxes
+    id: completeness
+    attributes:
+      label: Reporting checks
+      options:
+        - label: I will preserve all publishable run-level outputs and score records, not selected examples only.
+          required: true
+        - label: I will disclose deviations, exclusions, failed runs, and treatment costs.
+          required: true
+        - label: I have permission to publish the test material and it contains no secrets or prohibited private content.
+          required: true
+        - label: I will give submitted cases, runs, reports, and reproductions governed metadata sidecars and parent links.
+          required: true

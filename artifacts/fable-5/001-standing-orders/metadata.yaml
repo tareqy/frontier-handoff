@@ -1,0 +1,78 @@
+schema_version: "0.1"
+artifact_id: fable-5-001-standing-orders
+title: Standing Orders for Claude Opus 4.8
+description: >-
+  A user-attributed Fable 5 output proposing standing instructions for a
+  successor model reported as Claude Opus 4.8.
+artifact_type: successor-standing-instructions
+claim_class: operational-proposal
+status: raw
+source_model: Fable 5
+target_model: Claude Opus 4.8
+provider: unknown
+model_identifier: unknown
+model_mode: unknown
+interface: unknown
+system_instructions: unknown
+created_at: unknown
+imported_at: "2026-07-13"
+prompt_path: prompts/fable-5/001-standing-orders/prompt.md
+parent_artifacts:
+  - fable-5-001-standing-orders-prompt
+tools_available: unknown
+attachments_or_context_used: unknown
+content:
+  path: artifacts/fable-5/001-standing-orders/raw.md
+  media_type: text/markdown
+  sha256: "1970c7004e5c91307f43ad654053086beaa2e36768382730fd276d699e709735"
+  byte_count: 20706
+provenance:
+  source: user-provided
+  original_filename: standing-instructions(1).md
+  observed_import_filename: standing-instructions.md
+  requested_source_path: /mnt/data/standing-instructions(1).md
+  observed_import_source: ~/Downloads/standing-instructions.md
+  source_path_note: >-
+    The requested /mnt/data path was absent in the import environment. The
+    separately specified Downloads file was present and was used for import.
+  source_model_attribution: user-reported
+  target_model_attribution: user-reported
+  prompt_output_relationship: user-reported
+  content_modified: false
+  copy_integrity_verified: true
+  chain_of_custody: >-
+    The repository records the supplied file and the contributor's attribution;
+    it does not independently authenticate the generating model or run.
+modifications: {}
+review:
+  human_reviewed: false
+  reviewers: []
+  human_review_paths: []
+  cross_model_reviewed: false
+  review_models: []
+  cross_model_review_paths: []
+  experimentally_validated: false
+  evaluation_paths: []
+  independently_reproduced: false
+  reproduction_paths: []
+  preliminary_review:
+    path: artifacts/fable-5/001-standing-orders/review-notes.md
+    reviewer_label: GPT-5.6-SOL
+    reviewer_identifier: unknown
+    status: initial-model-opinion
+    protocol_complete: false
+validation_status: not-tested
+lifecycle_events:
+  imported-raw-2026-07-13:
+    occurred_at: "2026-07-13"
+    actor: GPT-5.6-SOL session
+    event_type: imported-raw
+    description: Copied the available Downloads source byte-for-byte and recorded its SHA-256 digest.
+known_limitations:
+  - Exact source and target model identifiers are unknown.
+  - Provider, interface, mode, tool access, and original creation date are unknown.
+  - No original generation log is available.
+  - The prompt-to-output relationship and model attributions are user-reported.
+  - No completed experiment establishes that these instructions improve performance.
+license: unknown
+relevant_commit: unknown

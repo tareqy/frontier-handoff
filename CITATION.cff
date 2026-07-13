@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: >-
+  If you use Frontier Handoff, cite the repository and the specific artifact,
+  experiment, and commit you relied on.
+title: Frontier Handoff
+type: software
+authors:
+  - name: Frontier Handoff contributors
+license: MIT
+abstract: >-
+  A provenance-first repository for preserving model-generated operational
+  proposals and testing whether they improve successor-model performance.
+keywords:
+  - language models
+  - reproducibility
+  - provenance
+  - evaluation

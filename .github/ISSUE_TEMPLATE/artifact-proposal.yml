@@ -1,0 +1,75 @@
+name: Artifact or prompt proposal
+description: Propose an extraction prompt, raw artifact, handoff, critique, routing protocol, or failure map.
+title: "[Artifact proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste secrets, private prompts, personal data, customer material, confidential conversations, or proprietary content into this form.
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Contribution type
+      options:
+        - Extraction prompt
+        - Raw model output
+        - Curated handoff
+        - Model critique
+        - Routing protocol
+        - Failure map
+        - Other operational proposal
+    validations:
+      required: true
+  - type: input
+    id: proposed_id
+    attributes:
+      label: Proposed stable ID
+      description: Use lower-case letters, digits, and hyphens; maintainers may revise it.
+      placeholder: provider-model-001-short-name
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and testable value
+      description: What operational behavior does this capture, and how could a baseline/treatment test show benefit or harm?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Available provenance
+      description: Include model display name and exact ID, provider, interface, mode, tools, date, context, prompt, edit status, and attribution source. Use unknown where needed.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Known limitations and risks
+      description: Include tool dependencies, likely confounds, rigidity, privacy, rights, or model self-report concerns.
+    validations:
+      required: true
+  - type: dropdown
+    id: edited
+    attributes:
+      label: Was the proposed output edited?
+      options:
+        - No
+        - Yes, with an edit record
+        - Unknown
+        - Not applicable
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Publication and safety
+      options:
+        - label: I have permission to publish the proposed material and will state its license or mark rights unknown.
+          required: true
+        - label: I will not include secrets, personal data, confidential material, private system prompts without permission, or proprietary content without permission.
+          required: true
+        - label: I understand that model attribution and self-reports are not accepted as verified facts without evidence.
+          required: true
+        - label: I will add governed metadata with a stable ID, checksum, provenance, parent links, and evidence state for any submitted record.
+          required: true

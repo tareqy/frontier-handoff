@@ -1,0 +1,69 @@
+schema_version: "0.1"
+artifact_id: fable-5-001-standing-orders-prompt
+title: Prompt for Standing Orders for Claude Opus 4.8
+description: >-
+  A user-provided extraction prompt reported to have elicited the standing
+  orders artifact from Fable 5.
+artifact_type: extraction-prompt
+claim_class: operational-proposal
+status: curated
+source_model: Fable 5
+target_model: Claude Opus 4.8
+provider: unknown
+model_identifier: unknown
+model_mode: unknown
+interface: unknown
+system_instructions: unknown
+created_at: unknown
+imported_at: "2026-07-13"
+prompt_path: unknown
+parent_artifacts: []
+tools_available: unknown
+attachments_or_context_used: unknown
+content:
+  path: prompts/fable-5/001-standing-orders/prompt.md
+  media_type: text/markdown
+  sha256: "2d714663acb075cdcf0d5511a2fae09061e3b2542c46a00d918be4cc68f83f82"
+  byte_count: 3145
+provenance:
+  source: user-provided
+  original_filename: unknown
+  observed_import_filename: unknown
+  source_model_attribution: user-reported
+  target_model_attribution: prompt-text
+  prompt_output_relationship: user-reported
+  content_modified: true
+  copy_integrity_verified: false
+  chain_of_custody: >-
+    The prompt text was supplied in the repository-initialization request and
+    reproduced inside a marked verbatim block. Repository documentation and
+    preservation markers were added outside that block. The original model run
+    was not independently observed.
+modifications:
+  documentation-wrapper-2026-07-13:
+    occurred_at: "2026-07-13"
+    actor: GPT-5.6-SOL session
+    modification_type: documentation-wrapper
+    description: Added a provenance header, verbatim markers, and a fenced block outside the supplied prompt wording.
+    reason: Preserve exact prompt wording while making its provenance status visible.
+    source: unknown
+    meaning_changed: false
+review:
+  human_reviewed: false
+  reviewers: []
+  human_review_paths: []
+  cross_model_reviewed: false
+  review_models: []
+  cross_model_review_paths: []
+  experimentally_validated: false
+  evaluation_paths: []
+  independently_reproduced: false
+  reproduction_paths: []
+validation_status: not-tested
+lifecycle_events: {}
+known_limitations:
+  - The original run date, exact source-model identifier, provider, interface, mode, tools, and system context are unknown.
+  - The prompt-output relationship and Fable 5 source-model attribution are user-reported.
+  - The stored Markdown file includes repository-authored framing outside the verbatim prompt block.
+license: unknown
+relevant_commit: unknown

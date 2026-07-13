@@ -1,0 +1,35 @@
+name: Validate repository
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Parse YAML files
+        shell: bash
+        run: |
+          find . -type f \( -name '*.yaml' -o -name '*.yml' -o -name 'CITATION.cff' \) \
+            -not -path './.git/*' -print0 \
+            | xargs -0 -r ruby -ryaml -rdate -e \
+              'ARGV.each { |path| YAML.safe_load_file(path, permitted_classes: [Date, Time], aliases: false) }'
+
+      - name: Run validator tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Validate repository
+        run: python scripts/validate_repository.py .
