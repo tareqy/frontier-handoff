@@ -1,5 +1,7 @@
 # Frontier Handoff
 
+> **Project status: early.** One artifact has been imported and no evaluations have been run yet.
+
 Frontier Handoff is an open repository for testing whether explicit instructions, procedures, and failure analyses produced during temporary model access can improve the work of successor models.
 
 The repository preserves prompts and raw outputs, records their provenance, separates editorial judgment from source material, and provides protocols for controlled comparison. “Handoff” is a hypothesis about transferring useful operational text. It is not a claim that text transfers a model's weights, latent capability, private reasoning, or product environment.
